@@ -679,7 +679,7 @@ class MainActivity : Activity() {
         v.setBackgroundColor(Color.BLACK)
         frame.addView(v, FrameLayout.LayoutParams(-1, -1))
         root.visibility = View.GONE
-        setImmersive(true)
+        setFullscreenMode(true)
     }
 
     private fun hideCustomView() {
@@ -687,12 +687,12 @@ class MainActivity : Activity() {
         frame.removeView(v)
         customView = null
         root.visibility = View.VISIBLE
-        setImmersive(false)
+        setFullscreenMode(false)
         customCallback?.onCustomViewHidden()
         customCallback = null
     }
 
-    private fun setImmersive(on: Boolean) {
+    private fun setFullscreenMode(on: Boolean) {
         if (Build.VERSION.SDK_INT >= 30) {
             val c = window.insetsController ?: return
             if (on) {
