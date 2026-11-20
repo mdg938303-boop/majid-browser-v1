@@ -1,0 +1,1 @@
+Majid Browser v1.1 source project. Open the project root in Android Studio with JDK 17 and Android SDK 35.
